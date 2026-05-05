@@ -1,0 +1,10 @@
+{
+  "name": "zachl111/zenith-sec-sandbox-vault",
+  "description": "Implement a PHP security tooling project for sandbox event replay, using fixture event logs and golden state snapshots.",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Portfolio\\": "src/"
+    }
+  }
+}
