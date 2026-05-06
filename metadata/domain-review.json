@@ -1,0 +1,73 @@
+{
+  "repo": "zenith-sec-sandbox-vault",
+  "language": "PHP",
+  "category": "Security tooling",
+  "goal": "Implement a PHP security tooling project for sandbox event replay, using fixture event logs and golden state snapshots.",
+  "review_model": {
+    "terms": [
+      "trust boundary",
+      "claim drift",
+      "replay exposure",
+      "policy width"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "trust boundary",
+      "signal": 65,
+      "slack": 38,
+      "drag": 29,
+      "confidence": 64,
+      "score": 145,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "claim drift",
+      "signal": 61,
+      "slack": 29,
+      "drag": 22,
+      "confidence": 62,
+      "score": 147,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "replay exposure",
+      "signal": 53,
+      "slack": 27,
+      "drag": 12,
+      "confidence": 49,
+      "score": 146,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "policy width",
+      "signal": 49,
+      "slack": 40,
+      "drag": 8,
+      "confidence": 46,
+      "score": 160,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "trust boundary",
+      "signal": 62,
+      "slack": 25,
+      "drag": 15,
+      "confidence": 45,
+      "score": 149,
+      "lane": "ship"
+    }
+  ]
+}
